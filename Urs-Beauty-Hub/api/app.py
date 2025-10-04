@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  # optional, allows cross-origin requests
+CORS(app)
 
 @app.route('/')
 def home():
@@ -19,6 +19,7 @@ def services():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
 
 
 
